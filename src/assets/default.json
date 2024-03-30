@@ -2,25 +2,21 @@
   "perPage": 100,
   "pageSize": 8,
   "tabs": {
-    "All Modules": {
-      "topic": "azerothcore-module",
-      "path": "/azerothcore-module"
+    "All projects": {
+      "topic": "unict-qd",
+      "path": "/unict-qd"
     },
-    "Premium Modules": {
-      "topic": "azerothcore-module+ac-premium",
-      "path": "/azerothcore-module+ac-premium"
+    "2023-2024": {
+      "topic": "unict-qd+unict-qd-2023-2024",
+      "path": "/unict-qd+unict-qd-2023-2024"
     },
-    "Tools": {
-      "topic": "azerothcore-tools",
-      "path": "/azerothcore-tools"
+    "2022-2023": {
+      "topic": "unict-qd+unict-qd-2022-2023",
+      "path": "/unict-qd+unict-qd-2022-2023"
     },
-    "Lua scripts": {
-      "topic": "azerothcore-lua",
-      "path": "/azerothcore-lua"
-    },
-    "SQL": {
-      "topic": "azerothcore-sql",
-      "path": "/azerothcore-sql"
+    "2021-2022": {
+      "topic": "unict-qd+unict-qd-2021-2022",
+      "path": "/unict-qd+unict-qd-2021-2022"
     }
   }
 }
