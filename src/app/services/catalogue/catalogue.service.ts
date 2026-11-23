@@ -34,7 +34,7 @@ export class CatalogueService {
       return of(JSON.parse(item).value);
     }
 
-    const topicFilter = topic ? `+topic:${topic}` : '';
+    const topicFilter = this.topicFilter(topic);
     const orgFilter = org ? `org:${org}+` : '';
 
     const perPage = this.CONF.perPage;
@@ -71,6 +71,15 @@ export class CatalogueService {
     }).pipe(reduce((acc, val) => acc.concat(val), []));
 
     return this.cacheable(pages$, key);
+  }
+
+  private topicFilter(topic: string | string[]): string {
+    if (Array.isArray(topic)) {
+      // GitHub search can't OR topic: qualifiers, only plain words. in:topics limits those words to whole topic names
+      return `+${topic.join('+OR+')}+in:topics`;
+    }
+
+    return topic ? `+topic:${topic}` : '';
   }
 
   cacheable<T extends Repository | Repository[]>(obs: Observable<T>, key: string): Observable<T> {

@@ -6,7 +6,7 @@ export interface Config {
 }
 
 export interface Tab {
-  topic?: string;
+  topic?: string | string[];
   org?: string;
   path: string;
 }
